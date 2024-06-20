@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgrinhoNews</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">AgrinhoNews</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destaques">Destaques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#noticias">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="destaques" class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="display-4">Destaques</h1>
+            <p class="lead">As principais notícias do mundo agrícola</p>
+        </div>
+    </header>
+    <section id="noticias" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Últimas Notícias</h2>
+            <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="noticia1.html">
+                            <img src="https://nexo-uploads-beta.s3.amazonaws.com/wp-content/uploads/images/2024/05/2024-05-06T163727Z_1548041212_RC21L7AJ4QPT_RTRMADP_3_BRAZIL-RAINS-scaled.jpg" class="d-block w-100" alt="Notícia 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Escassez de arroz, e agora?</h5>
+                                <p>As chuvas torrenciais que devastaram o Rio Grande do Sul nas últimas semanas...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="noticia2.html">
+                            <img src="https://dji-official-fe.djicdn.com/dps/0042a681f6a88953425198b366794b57.jpg" class="d-block w-100" alt="Notícia 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Drones vão revolucionar a agricultura!</h5>
+                                <p>Como drones vão revolucionar a agricultura no paraná...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Adicione mais notícias aqui -->
+                </div>
+                <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próxima</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre o AgrinhoNews</h2>
+            <p>O AgrinhoNews é uma plataforma dedicada a trazer as últimas notícias e informações relevantes sobre o mundo agrícola, desde as últimas tecnologias até as tendências de mercado.</p>
+        </div>
+    </section>
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>&copy; 2024 AgrinhoNews. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* Estilos personalizados */
+
+/* Estilos para o carrossel de notícias */
+.carousel-item img {
+    max-height: 400px; /* Ajuste o tamanho conforme necessário */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+}
+
+.carousel-caption p {
+    color: #eee;
+}
+
+/* Estilos para a seção Sobre */
+#sobre {
+    color: #333;
+}
+
+/* Estilos para o rodapé */
+footer {
+    color: #fff;
+}
+
+/* Estilos para a página de notícias detalhadas */
+.article-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajuste o tamanho conforme necessário */
+    object-fit: cover;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+article h2, article h3 {
+    margin-top: 20px;
+    color: #007bff;
+}
+
+article p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
