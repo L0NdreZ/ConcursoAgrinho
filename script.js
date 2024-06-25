@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const userNameDisplay = document.getElementById("user-name");
+    const logoutButton = document.getElementById("logout-button");
 
     function promptForLogin() {
         let username = prompt("Digite seu nome:");
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         alert(`Olá ${username}, seja bem-vindo!`);
                         localStorage.setItem("loggedInUser", username);
                         userNameDisplay.textContent = username;
+                        logoutButton.style.display = "inline-block";
                     } else {
                         alert("Senha incorreta. Tente novamente.");
                         promptForLogin();
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert(`Registro realizado com sucesso! Olá ${username}, seja bem-vindo!`);
                     localStorage.setItem("loggedInUser", username);
                     userNameDisplay.textContent = username;
+                    logoutButton.style.display = "inline-block";
                 } else {
                     alert("Senha não pode estar vazia.");
                     promptForLogin();
@@ -38,14 +41,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function logout() {
+        localStorage.removeItem("loggedInUser");
+        userNameDisplay.textContent = "";
+        logoutButton.style.display = "none";
+        promptForLogin();
+    }
+
     // Verifica se o usuário já está logado
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
         userNameDisplay.textContent = loggedInUser;
+        logoutButton.style.display = "inline-block";
     } else {
         promptForLogin();
     }
 
+    logoutButton.addEventListener("click", logout);
+
     // Inicialização do carrossel de notícias
     $('.carousel').carousel();
 });
+
