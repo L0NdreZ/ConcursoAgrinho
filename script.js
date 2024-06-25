@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
 });
 $('.carousel').carousel();
+});
