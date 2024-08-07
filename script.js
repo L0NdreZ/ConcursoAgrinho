@@ -6,34 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let username = prompt("Digite seu nome:");
         if (username) {
             if (localStorage.getItem(username)) {
-                let password = prompt("Digite sua senha:");
                 if (password) {
-                    const storedPassword = localStorage.getItem(username);
-                    if (storedPassword === password) {
-                        alert(`Olá ${username}, seja bem-vindo!`);
-                        localStorage.setItem("loggedInUser", username);
-                        userNameDisplay.textContent = username;
-                        logoutButton.style.display = "inline-block";
-                    } else {
-                        alert("Senha incorreta. Tente novamente.");
-                        promptForLogin();
-                    }
-                } else {
-                    alert("Senha não pode estar vazia.");
-                    promptForLogin();
-                }
-            } else {
-                let password = prompt("Digite uma nova senha para registro:");
-                if (password) {
-                    localStorage.setItem(username, password);
+                    localStorage.setItem(username);
                     alert(`Registro realizado com sucesso! Olá ${username}, seja bem-vindo!`);
                     localStorage.setItem("loggedInUser", username);
                     userNameDisplay.textContent = username;
                     logoutButton.style.display = "inline-block";
-                } else {
-                    alert("Senha não pode estar vazia.");
-                    promptForLogin();
-                }
+                } 
             }
         } else {
             alert("Nome não pode estar vazio.");
@@ -47,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         logoutButton.style.display = "none";
         promptForLogin();
     }
-
-    // Verifica se o usuário já está logado
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
         userNameDisplay.textContent = loggedInUser;
@@ -58,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     logoutButton.addEventListener("click", logout);
-
-    // Inicialização do carrossel de notícias
     $('.carousel').carousel();
 });
 
