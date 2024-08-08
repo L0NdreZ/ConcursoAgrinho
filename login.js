@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         registerForm.style.display = "none";
         loginForm.style.display = "block";
     });
-
-    // Função de registro
     registerForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const username = document.getElementById("register-username").value;
